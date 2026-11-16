@@ -1,0 +1,40 @@
+{
+  "providers": [
+    {
+      "id": "provider-a",
+      "label": "Primary provider",
+      "baseUrl": "https://api.openai.com/v1",
+      "apiKeyEnv": "PROVIDER_A_API_KEY",
+      "model": "gpt-4.1-mini",
+      "enabled": true,
+      "priority": 1,
+      "dailyRequestLimit": 60,
+      "monthlyRequestLimit": 1200,
+      "maxOutputTokens": 1200
+    },
+    {
+      "id": "provider-b",
+      "label": "Fallback provider",
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "apiKeyEnv": "PROVIDER_B_API_KEY",
+      "model": "openai/gpt-4.1-mini",
+      "enabled": true,
+      "priority": 2,
+      "dailyRequestLimit": 30,
+      "monthlyRequestLimit": 600,
+      "maxOutputTokens": 1200
+    },
+    {
+      "id": "provider-c",
+      "label": "Second fallback",
+      "baseUrl": "https://api.groq.com/openai/v1",
+      "apiKeyEnv": "PROVIDER_C_API_KEY",
+      "model": "llama-3.3-70b-versatile",
+      "enabled": false,
+      "priority": 3,
+      "dailyRequestLimit": 10,
+      "monthlyRequestLimit": 200,
+      "maxOutputTokens": 1200
+    }
+  ]
+}
